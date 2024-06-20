@@ -4,7 +4,8 @@ cd client
 npm i
 npm run build
 
-cd ..
+cd ../server
 python -m venv .venv
 source .venv/bin/activate
 pip install -r requirements.txt
+deactivate

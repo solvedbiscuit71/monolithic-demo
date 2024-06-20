@@ -1,3 +1,4 @@
+# Package directory
 .venv/
 __pycache__/
 node_modules/
@@ -24,3 +25,7 @@ static/
 *.njsproj
 *.sln
 *.sw
+
+# Environment variables
+.env.*.local
+*.local

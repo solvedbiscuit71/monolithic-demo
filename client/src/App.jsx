@@ -1,11 +1,19 @@
-import { BackendContext } from './Context'
-import Message from './components/Message'
+import { useState } from "react"
 
 function App() {
+  const [message, setMessage] = useState('');
+  
+  async function handleRequest() {
+    const res = await fetch(import.meta.env.VITE_API + '/message');
+    const data = await res.json();
+    setMessage(data.message);
+  }
+
   return (
-    <BackendContext.Provider value={import.meta.env.DEV ? 'http://127.0.0.1:5000/api' : '/api'}>
-      <Message/>
-    </BackendContext.Provider>
+    <>
+      <button onClick={handleRequest}>Click Me</button>
+      <p>Server response: {message}</p>
+    </>
   )
 }
 

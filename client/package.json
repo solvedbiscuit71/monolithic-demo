@@ -1,10 +1,10 @@
 {
   "name": "monolithic-demo",
   "private": true,
-  "version": "0.0.0",
+  "version": "0.0.1",
   "type": "module",
   "scripts": {
-    "dev": "vite --port 5001",
+    "dev": "vite --port 8008",
     "build": "vite build --base=/static/ --emptyOutDir",
     "lint": "eslint . --ext js,jsx --report-unused-disable-directives --max-warnings 0",
     "preview": "vite preview"
