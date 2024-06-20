@@ -2,7 +2,6 @@
 
 cd client
 npm i
-npm run build
 
 cd ../server
 python -m venv .venv
