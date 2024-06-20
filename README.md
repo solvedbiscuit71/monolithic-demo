@@ -1,4 +1,4 @@
-# Monolithic Demo
+# Monolithic Template
 
 ## Frontend
 
