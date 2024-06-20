@@ -29,3 +29,6 @@ static/
 # Environment variables
 .env.*.local
 *.local
+
+# SQLite Database
+*.db
