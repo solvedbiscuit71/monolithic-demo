@@ -1,6 +1,4 @@
-FROM alpine:3.20
-
-ENV DOCKER_BUILD=1
+FROM python:3.10.14-alpine
 
 EXPOSE 8080
 
@@ -8,10 +6,10 @@ RUN mkdir -p /home/app
 
 WORKDIR /home/app
 
-COPY . .
+COPY ./server .
 
-RUN apk add --upgrade python3 nodejs npm
+RUN python3 -m venv .venv && source .venv/bin/activate
 
-RUN ./setup.sh
+RUN pip install -r requirements.txt
 
-CMD ["/bin/sh", "host.sh"]
+CMD ["python", "app.py"]

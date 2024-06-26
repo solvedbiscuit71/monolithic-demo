@@ -8,6 +8,5 @@ README.md
 client/node_modules
 server/.venv
 server/*.db
-server/static
 
 **/.DS_Store
