@@ -1,4 +1,9 @@
 .git
+.gitignore
+
+.dockerignore
+Dockerfile
+README.md
 
 client/node_modules
 server/.venv
