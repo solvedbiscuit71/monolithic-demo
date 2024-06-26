@@ -13,9 +13,17 @@
 # Run local
 
 1. Install the correct version of node and python as mentioned above
-2. Run the `./script/setup.sh` script
-3. Run the `./script/host.sh` script
-4. Your application will be hosted at [http://127.0.0.1:8080/](http://127.0.0.1:8080/)
+2. Run the setup script
+
+```bash
+./script/setup.sh
+```
+
+3. Run the host script to publish at [http://127.0.0.1:8080/](http://127.0.0.1:8080/)
+
+```bash
+./script/host.sh
+```
 
 # Docker
 
