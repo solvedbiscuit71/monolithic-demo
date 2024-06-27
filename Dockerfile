@@ -1,15 +1,10 @@
-FROM python:3.10.14-alpine
-
-EXPOSE 8080
-
-RUN mkdir -p /home/app
-
-WORKDIR /home/app
-
-COPY ./server .
-
-RUN python3 -m venv .venv && source .venv/bin/activate
-
+FROM python:3.10-alpine
+WORKDIR /code
+ENV FLASK_APP=app.py
+ENV FLASK_RUN_HOST=0.0.0.0
+RUN apk add --no-cache gcc musl-dev linux-headers
+COPY ./server/requirements.txt .
 RUN pip install -r requirements.txt
-
-CMD ["python", "app.py"]
+EXPOSE 5000
+COPY ./server .
+CMD ["flask", "run", "--debug"]

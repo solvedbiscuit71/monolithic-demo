@@ -1,0 +1,17 @@
+services:
+  web-app:
+    build: .
+    develop:
+      watch:
+        - action: sync
+          path: ./server
+          target: /code
+        - action: rebuild
+          path: ./server/requirements.txt
+          target: /code/requirements
+    ports:
+      - 8080:5000
+    # volumes:
+    #   - db_data:/code/data
+# volumes:
+#   db_data: 

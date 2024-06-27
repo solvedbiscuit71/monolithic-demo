@@ -1,6 +1,6 @@
 # Monolithic Template
 
-## Frontend
+## Frontend (mandatory to run)
 
 - Node Version (v20.11.1)
 - NPM Version (10.2.4)
@@ -33,14 +33,14 @@
 ./script/migrate.sh
 ```
 
-2. Build the docker image
+2. Use docker compose to build and run the container
 
 ```bash
-docker build -t monolithic-template:latest .
+docker compose up
 ```
 
-3. Run the container
+3. You can also use docker compose watch to update container's source file on local file change
 
 ```bash
-docker run -d -p 8080:8080 --name web-app monolithic-template:latest
+docker compose up --watch
 ```

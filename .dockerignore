@@ -7,6 +7,6 @@ README.md
 
 client/node_modules
 server/.venv
-server/*.db
+server/data/*.db
 
 **/.DS_Store
