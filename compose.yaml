@@ -4,6 +4,6 @@ services:
     ports:
       - 8080:5000
     volumes:
-      - sqlite_data:/code/data
+      - sqlite_data:/home/app/data
 volumes:
   sqlite_data: 

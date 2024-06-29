@@ -16,6 +16,6 @@ COPY ./server/requirements.txt ./
 RUN pip install --no-cache-dir -r requirements.txt
 EXPOSE 5000
 COPY ./server/ ./
-COPY --from=client-builder /home/server/static ./
+COPY --from=client-builder /home/server/static ./static
 
 CMD [ "flask", "run" ]
