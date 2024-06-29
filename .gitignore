@@ -1,6 +1,7 @@
 .git
 
 client/node_modules
+server/__pycache__
 server/.venv
 server/data/*.db
 server/static

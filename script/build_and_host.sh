@@ -3,4 +3,4 @@ npm run build
 
 cd ../server
 source .venv/bin/activate
-python3 app.py
+flask run --port 8080

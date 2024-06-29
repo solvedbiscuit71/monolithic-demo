@@ -10,7 +10,7 @@
 - Python Version (3.10.12 or higher)
 - Pip Version (24.0)
 
-# Run local
+# Deploy locally
 
 1. Install the correct version of node and python as mentioned above
 2. Run the setup script
@@ -22,25 +22,15 @@
 3. Run the host script to publish at [http://127.0.0.1:8080/](http://127.0.0.1:8080/)
 
 ```bash
-./script/host.sh
+./script/build_and_host.sh
 ```
 
-# Docker
+# Deploy in Docker
 
-1. Run the migrate script to export the client artifact
+1. Use docker compose to build and run the container
 
 ```bash
-./script/migrate.sh
+docker compose up -d
 ```
 
-2. Use docker compose to build and run the container
-
-```bash
-docker compose up
-```
-
-3. You can also use docker compose watch to update container's source file on local file change
-
-```bash
-docker compose up --watch
-```
+2. The flask app is publish at [http://127.0.0.1:8080/](http://127.0.0.1:8080/)
